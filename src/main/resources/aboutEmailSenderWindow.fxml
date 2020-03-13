@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="393.0" prefWidth="317.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.AboutEmailSenderWindow">
+   <children>
+      <ImageView fx:id="imageView" fitHeight="150.0" fitWidth="200.0" layoutX="77.0" pickOnBounds="true" preserveRatio="true" />
+      <Label layoutX="58.0" layoutY="129.0" prefHeight="208.0" prefWidth="214.0" text="An application to support gmail. Dependencies used : jitpack.ioj, com.sun.mail  1.6.2, com.github.PlusHaze, org.apache.commons 3.8.1 " textAlignment="CENTER" textFill="#aeaeae" wrapText="true">
+         <font>
+            <Font name="Apple SD Gothic Neo Regular" size="19.0" />
+         </font>
+      </Label>
+      <Label layoutX="77.0" layoutY="346.0" text="Author Sylwester Gawroński" />
+      <Label layoutX="69.0" layoutY="329.0" text="GIT  github.com/Sylwester12351" />
+   </children>
+</AnchorPane>
