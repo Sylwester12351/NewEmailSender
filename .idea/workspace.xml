@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CONFIG-User" beforeDir="false" afterPath="$PROJECT_DIR$/CONFIG-User" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/helpers/OpenNewWindow.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -60,14 +60,20 @@
     <splitter split-orientation="horizontal" split-proportion="0.6951066">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file pinned="false" current-in-tab="true">
+          <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/main/java/controllers/LoginController.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="329">
-                  <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
-                  <folding>
-                    <element signature="imports" expanded="true" />
-                  </folding>
+                <state relative-caret-position="-770">
+                  <caret line="16" column="44" lean-forward="true" selection-start-line="16" selection-start-column="44" selection-end-line="16" selection-end-column="44" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/src/main/java/helpers/OpenNewWindow.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="45">
+                  <caret line="3" column="67" lean-forward="true" selection-start-line="3" selection-start-column="67" selection-end-line="3" selection-end-column="67" />
                 </state>
               </provider>
             </entry>
@@ -105,7 +111,7 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/main/java/controllers/TrayNotificationController.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="255">
+                <state relative-caret-position="315">
                   <caret line="21" selection-start-line="21" selection-end-line="21" />
                   <folding>
                     <element signature="imports" expanded="true" />
@@ -129,12 +135,12 @@
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/main/resources/aboutEmailSenderWindow.fxml">
-              <provider editor-type-id="JavaFX-Scene-Builder" />
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="15">
                   <caret line="1" selection-start-line="1" selection-end-line="1" />
                 </state>
               </provider>
+              <provider editor-type-id="JavaFX-Scene-Builder" />
             </entry>
           </file>
         </leaf>
@@ -189,6 +195,7 @@
         <option value="$PROJECT_DIR$/src/main/java/mailControllers/FetchingEmails.java" />
         <option value="$PROJECT_DIR$/src/main/java/mailControllers/CheckingMessages.java" />
         <option value="$PROJECT_DIR$/CONFIG-User" />
+        <option value="$PROJECT_DIR$/src/main/java/helpers/OpenNewWindow.java" />
       </list>
     </option>
   </component>
@@ -311,7 +318,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1584060393960" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1584209958806" />
     <property name="dynamic.classpath" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Libraries" />
@@ -467,7 +474,7 @@
     <frame x="0" y="23" width="1920" height="1004" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.15761448" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.15921193" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -476,7 +483,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32894737" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.13157895" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.13157895" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.20285088" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -498,6 +505,46 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="RECENTLY_FILTERED_USER_GROUPS">
+                <collection />
+              </option>
+              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+                <collection />
+              </option>
+              <option name="COLUMN_ORDER">
+                <list>
+                  <option value="0" />
+                  <option value="1" />
+                  <option value="2" />
+                  <option value="3" />
+                </list>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="RECENT_FILTERS">
+      <map>
+        <entry key="Branch">
+          <value>
+            <list />
+          </value>
+        </entry>
+        <entry key="User">
+          <value>
+            <list />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
     <option name="OFFER_MOVE_TO_ANOTHER_CHANGELIST_ON_PARTIAL_COMMIT" value="true" />
     <option name="INCLUDE_TEXT_INTO_SHELF" value="false" />
@@ -506,62 +553,42 @@
     </ignored-roots>
   </component>
   <component name="WindowStateProjectService">
-    <state x="773" y="217" key="#com.intellij.ide.util.MemberChooser" timestamp="1580841475729">
-      <screen x="0" y="23" width="1920" height="1004" />
-    </state>
-    <state x="773" y="217" key="#com.intellij.ide.util.MemberChooser/0.23.1920.1004@0.23.1920.1004" timestamp="1580841475729" />
-    <state x="773" y="217" key="#com.intellij.ide.util.MemberChooser/0.23.1920.1006@0.23.1920.1006" timestamp="1580660604645" />
-    <state x="580" y="222" key="#com.intellij.ide.util.frameworkSupport.AddFrameworkSupportDialog" timestamp="1580569480309">
-      <screen x="0" y="23" width="1920" height="1006" />
-    </state>
-    <state x="580" y="222" key="#com.intellij.ide.util.frameworkSupport.AddFrameworkSupportDialog/0.23.1920.1006@0.23.1920.1006" timestamp="1580569480309" />
-    <state x="734" y="392" width="451" height="276" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1580583775433">
-      <screen x="0" y="23" width="1920" height="1006" />
-    </state>
-    <state x="734" y="392" width="451" height="276" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.23.1920.1006@0.23.1920.1006" timestamp="1580583775433" />
-    <state x="698" y="280" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1580589693024">
-      <screen x="0" y="23" width="1920" height="1006" />
-    </state>
-    <state x="698" y="280" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.23.1920.1006@0.23.1920.1006" timestamp="1580589693024" />
-    <state width="1878" height="107" key="GridCell.Tab.0.bottom" timestamp="1580842643646">
-      <screen x="0" y="23" width="1920" height="1004" />
-    </state>
-    <state width="1878" height="107" key="GridCell.Tab.0.bottom/0.23.1920.1004@0.23.1920.1004" timestamp="1580842643646" />
-    <state width="1878" height="104" key="GridCell.Tab.0.bottom/0.23.1920.1006@0.23.1920.1006" timestamp="1580665918521" />
-    <state width="1878" height="107" key="GridCell.Tab.0.center" timestamp="1580842643645">
-      <screen x="0" y="23" width="1920" height="1004" />
-    </state>
-    <state width="1878" height="107" key="GridCell.Tab.0.center/0.23.1920.1004@0.23.1920.1004" timestamp="1580842643645" />
-    <state width="1878" height="104" key="GridCell.Tab.0.center/0.23.1920.1006@0.23.1920.1006" timestamp="1580665918521" />
-    <state width="1878" height="107" key="GridCell.Tab.0.left" timestamp="1580842643645">
-      <screen x="0" y="23" width="1920" height="1004" />
-    </state>
-    <state width="1878" height="107" key="GridCell.Tab.0.left/0.23.1920.1004@0.23.1920.1004" timestamp="1580842643645" />
-    <state width="1878" height="104" key="GridCell.Tab.0.left/0.23.1920.1006@0.23.1920.1006" timestamp="1580665918520" />
-    <state width="1878" height="107" key="GridCell.Tab.0.right" timestamp="1580842643646">
-      <screen x="0" y="23" width="1920" height="1004" />
-    </state>
-    <state width="1878" height="107" key="GridCell.Tab.0.right/0.23.1920.1004@0.23.1920.1004" timestamp="1580842643646" />
-    <state width="1878" height="104" key="GridCell.Tab.0.right/0.23.1920.1006@0.23.1920.1006" timestamp="1580665918521" />
-    <state x="428" y="305" key="SettingsEditor" timestamp="1580822514252">
-      <screen x="0" y="23" width="1920" height="1004" />
-    </state>
-    <state x="428" y="305" key="SettingsEditor/0.23.1920.1004@0.23.1920.1004" timestamp="1580822514252" />
-    <state x="428" y="307" key="SettingsEditor/0.23.1920.1006@0.23.1920.1006" timestamp="1580592496021" />
-    <state x="653" y="357" key="com.intellij.ide.util.TipDialog" timestamp="1580822459962">
-      <screen x="0" y="23" width="1920" height="1004" />
-    </state>
-    <state x="653" y="357" key="com.intellij.ide.util.TipDialog/0.23.1920.1004@0.23.1920.1004" timestamp="1580822459962" />
+    <state x="773" y="217" key="#com.intellij.ide.util.MemberChooser" />
+    <state x="773" y="217" key="#com.intellij.ide.util.MemberChooser/0.23.1920.1004@0.23.1920.1004" />
+    <state x="773" y="217" key="#com.intellij.ide.util.MemberChooser/0.23.1920.1006@0.23.1920.1006" />
+    <state x="580" y="222" key="#com.intellij.ide.util.frameworkSupport.AddFrameworkSupportDialog" />
+    <state x="580" y="222" key="#com.intellij.ide.util.frameworkSupport.AddFrameworkSupportDialog/0.23.1920.1006@0.23.1920.1006" />
+    <state x="734" y="392" width="451" height="276" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" />
+    <state x="734" y="392" width="451" height="276" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.23.1920.1006@0.23.1920.1006" />
+    <state x="698" y="280" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" />
+    <state x="698" y="280" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.23.1920.1006@0.23.1920.1006" />
+    <state width="1878" height="107" key="GridCell.Tab.0.bottom" />
+    <state width="1878" height="107" key="GridCell.Tab.0.bottom/0.23.1920.1004@0.23.1920.1004" />
+    <state width="1878" height="104" key="GridCell.Tab.0.bottom/0.23.1920.1006@0.23.1920.1006" />
+    <state width="1878" height="107" key="GridCell.Tab.0.center" />
+    <state width="1878" height="107" key="GridCell.Tab.0.center/0.23.1920.1004@0.23.1920.1004" />
+    <state width="1878" height="104" key="GridCell.Tab.0.center/0.23.1920.1006@0.23.1920.1006" />
+    <state width="1878" height="107" key="GridCell.Tab.0.left" />
+    <state width="1878" height="107" key="GridCell.Tab.0.left/0.23.1920.1004@0.23.1920.1004" />
+    <state width="1878" height="104" key="GridCell.Tab.0.left/0.23.1920.1006@0.23.1920.1006" />
+    <state width="1878" height="107" key="GridCell.Tab.0.right" />
+    <state width="1878" height="107" key="GridCell.Tab.0.right/0.23.1920.1004@0.23.1920.1004" />
+    <state width="1878" height="104" key="GridCell.Tab.0.right/0.23.1920.1006@0.23.1920.1006" />
+    <state x="428" y="305" key="SettingsEditor" />
+    <state x="428" y="305" key="SettingsEditor/0.23.1920.1004@0.23.1920.1004" />
+    <state x="428" y="307" key="SettingsEditor/0.23.1920.1006@0.23.1920.1006" />
+    <state x="653" y="357" key="com.intellij.ide.util.TipDialog" />
+    <state x="653" y="357" key="com.intellij.ide.util.TipDialog/0.23.1920.1004@0.23.1920.1004" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/CONFIG" />
     <entry file="file://$PROJECT_DIR$/src/main/resources/loginWindow.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="345">
           <caret line="23" column="56" selection-start-line="23" selection-start-column="56" selection-end-line="23" selection-end-column="56" />
         </state>
       </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder" />
     </entry>
     <entry file="file://$PROJECT_DIR$/CONFIGcheckboxes">
       <provider selected="true" editor-type-id="text-editor">
@@ -571,12 +598,12 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/preferencesWindow.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
           <caret line="5" column="33" lean-forward="true" selection-start-line="5" selection-start-column="33" selection-end-line="5" selection-end-column="33" />
         </state>
       </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/config/ReadConfig.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -625,12 +652,12 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/mainWindow.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="810">
           <caret line="59" column="56" selection-start-line="59" selection-start-column="56" selection-end-line="59" selection-end-column="56" />
         </state>
       </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/controllers/AboutEmailSenderWindow.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -700,6 +727,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/.gitattributes">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CONFIG-User">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="42" lean-forward="true" selection-start-column="42" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/mailControllers/FetchingEmails.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="45">
@@ -724,16 +761,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/controllers/TrayNotificationController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="21" selection-start-line="21" selection-end-line="21" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/properties/Service.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
@@ -742,30 +769,34 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/aboutEmailSenderWindow.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
           <caret line="1" selection-start-line="1" selection-end-line="1" />
         </state>
       </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/.gitattributes">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CONFIG-User">
+    <entry file="file://$PROJECT_DIR$/src/main/java/controllers/TrayNotificationController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="42" lean-forward="true" selection-start-column="42" selection-end-column="42" />
+        <state relative-caret-position="315">
+          <caret line="21" selection-start-line="21" selection-end-line="21" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/controllers/LoginController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="329">
-          <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="-770">
+          <caret line="16" column="44" lean-forward="true" selection-start-line="16" selection-start-column="44" selection-end-line="16" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/helpers/OpenNewWindow.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="67" lean-forward="true" selection-start-line="3" selection-start-column="67" selection-end-line="3" selection-end-column="67" />
         </state>
       </provider>
     </entry>
