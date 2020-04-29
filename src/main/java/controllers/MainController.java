@@ -1,5 +1,6 @@
 package controllers;
 
+import helpers.OpenNewWindow;
 import helpers.ShowLogo;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
@@ -23,6 +24,7 @@ import java.util.ResourceBundle;
  * @Author: Sylwester Gawroński
  */
 public class MainController implements Initializable {
+    private OpenNewWindow openNewWindow = new OpenNewWindow();
    private SendEmail sendEmail = new SendEmail();
    private CheckingMessages checkingMessages = new CheckingMessages();
    private User user = new User();
@@ -62,18 +64,7 @@ public class MainController implements Initializable {
     }
     @FXML
     private void about(){
-            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/aboutEmailSenderWindow.fxml"));
-        Parent root1 = null;
-        try {
-            root1 = (Parent) fxmlLoader.load();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        Stage stage = new Stage();
-            stage.setScene(new Scene(root1));
-            stage.setResizable(false);
-            stage.setTitle("About EmailSender");
-            stage.show();
+         openNewWindow.openWindow("aboutEmailSenderWindow.fxml","About EmailSender");
 
     }
 }

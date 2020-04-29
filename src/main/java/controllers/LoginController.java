@@ -2,6 +2,7 @@ package controllers;
 
 import config.ReadConfig;
 import config.SaveConfig;
+import helpers.OpenNewWindow;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -25,6 +26,7 @@ import java.util.ResourceBundle;
  * @Author: Sylwester Gawroński
  */
 public class LoginController implements Initializable {
+    private OpenNewWindow openNewWindow = new OpenNewWindow();
     private CheckBoxesControl checkBoxesControl = new CheckBoxesControl();
     private Parent root1;
     private SaveConfig saveConfig = new SaveConfig();
@@ -102,18 +104,6 @@ public class LoginController implements Initializable {
         if (checkBoxRemember.isSelected()){
             saveConfig.saveUser();
         }
-
-        try { // open new window mainWindow todo otwieranie nowego okna przenieść do oddzielnej klasy bez sensu pisać to po 20 razy
-            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/mainWindow.fxml"));
-            root1 = (Parent) fxmlLoader.load();
-            Stage stage = new Stage();
-            stage.setScene(new Scene(root1));
-            stage.setResizable(false);
-            stage.setTitle("EmailSender2");
-            stage.show();
-        } catch (Exception e) {
-            e.printStackTrace();
-            trayNotificationController.viewNotification("Error", "FXMLLoader exception "+e);
-        }
+        openNewWindow.openWindow("mainWindow.fxml","EmailSender");
     }
 }

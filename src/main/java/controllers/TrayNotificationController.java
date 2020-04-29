@@ -6,7 +6,7 @@ import helpers.ShowLogo;
 import javafx.scene.image.Image;
 import javafx.util.Duration;
 /**
- * @Author: Sylwester Gawtoński
+ * @Author: Sylwester Gawroński
  */
 public class TrayNotificationController extends ShowLogo {
     public TrayNotificationController viewNotification(String title, String message){
