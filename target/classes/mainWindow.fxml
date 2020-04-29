@@ -57,7 +57,7 @@
         </Menu>
         <Menu mnemonicParsing="false" text="Help">
           <items>
-            <MenuItem fx:id="menuIntemAbout" onAction="#about" mnemonicParsing="false" text="About EmailSender" />
+            <MenuItem fx:id="menuIntemAbout" mnemonicParsing="false" onAction="#about" text="About EmailSender" />
           </items>
         </Menu>
       </menus>
@@ -74,14 +74,14 @@
                 <Color blue="0.624" green="0.624" red="0.624" fx:id="x2" />
               </textFill>
             </Label>
-                  <ListView fx:id="listViewMessages" layoutX="11.0" layoutY="37.0" prefHeight="200.0" prefWidth="200.0" />
+                  <ListView fx:id="listViewMessages" layoutY="37.0" prefHeight="494.0" prefWidth="211.0" />
                   <Label fx:id="labelCount" layoutX="137.0" layoutY="17.0" text="0" />
           </children>
         </AnchorPane>
         <AnchorPane prefHeight="549.0" prefWidth="218.0">
           <children>
             <Label alignment="CENTER" font="$x1" layoutX="14.0" layoutY="14.0" style="&#10;" text="View" textAlignment="CENTER" textFill="$x2" wrapText="false" />
-                  <TextArea editable="false" layoutX="8.0" layoutY="37.0" prefHeight="200.0" prefWidth="200.0" wrapText="true" />
+                  <TextArea editable="false" layoutX="8.0" layoutY="37.0" prefHeight="494.0" prefWidth="286.0" wrapText="true" />
           </children>
         </AnchorPane>
             <VBox prefHeight="549.0" prefWidth="479.0">

@@ -5,15 +5,22 @@ import controllers.TrayNotificationController;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.Properties;
 
 import javax.mail.*;
+import javax.mail.internet.MimeMultipart;
 
+// todo ta klasa musi być odtwarzana cyklicznie
 public class CheckingMessages {
     private int messagesCout = 0;
     private Message[] messages;
     private ObservableList<String> listStrings = FXCollections.<String>observableArrayList();
+    private Map<Message, Object> listMessage = new HashMap<Message, Object>();
+   // private Map<String,String> dataTest = new HashMap<>();TEST
+
     private TrayNotificationController trayNotificationController = new TrayNotificationController();
 
     public void checkMail(String host, String storeType, String user, String password) {
@@ -56,15 +63,24 @@ public class CheckingMessages {
             messages = emailFolder.getMessages();
             System.out.println("messages.length---" + messages.length);
 
+            //dataTest.put("klucz","wartosc");
+
             for (int i = 0, n = messages.length; i < n; i++) {
                 Message message = messages[i];
                 listStrings.add(i,message.getSubject());
                 messagesCout = i + 1;
-                System.out.println("---------------------------------");
-                System.out.println("Email Number " + (i + 1));
-                System.out.println("Subject: " + message.getSubject());
-                System.out.println("From: " + message.getFrom()[0]);
-                System.out.println("Text: " + message.getContent().toString());
+
+                // read message
+               Object content = message.getContent();
+               if (content instanceof MimeMultipart){
+                   MimeMultipart multipart = (MimeMultipart) content;
+                   if (multipart.getCount()>0){
+                       BodyPart part = multipart.getBodyPart(0);
+                       content = part.getContent();
+                       //System.out.println(content);
+                       listMessage.put(message,content);
+                   }
+               }
             }
             if (messagesCout < 0){
                 trayNotificationController.viewNotification("Message", "New Messages = "+ messagesCout);
@@ -83,6 +99,11 @@ public class CheckingMessages {
         } catch (Exception e) {
             e.printStackTrace();
         }
+
+    }
+
+    public Map<Message, Object> getListMessage() {
+        return listMessage;
     }
 
     public int getMessagesCout() {
@@ -96,4 +117,5 @@ public class CheckingMessages {
     public List<String> getListStrings() {
         return listStrings;
     }
+
 }

@@ -2,22 +2,15 @@ package controllers;
 
 import helpers.OpenNewWindow;
 import helpers.ShowLogo;
-import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
 import javafx.scene.control.*;
-import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
-import javafx.stage.Stage;
 import mailControllers.CheckingMessages;
 import mailControllers.SendEmail;
 import properties.Service;
 import properties.User;
 
-import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 /**
@@ -54,13 +47,14 @@ public class MainController implements Initializable {
         imageViewIcon.setImage(ShowLogo.getLogo());
         checkingMessages.checkMail(service.getHostPOP(),service.getMailStoreType(),user.getFROM(),user.getPASSWORD());
         labelCount.setText(String.valueOf(checkingMessages.getMessagesCout()));
-        listViewMessages.setItems((ObservableList) checkingMessages.getListStrings());
-
+        listViewMessages.getItems().addAll(checkingMessages.getListMessage().keySet());
     }
+
 
     @FXML
     private void sendMessage(){
         sendEmail.sendEmail(textFieldAddres.getText(),textFieldTitle.getText(),textAreaMessage.getText());
+
     }
     @FXML
     private void about(){
