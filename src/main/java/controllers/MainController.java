@@ -16,7 +16,7 @@ import java.util.ResourceBundle;
 /**
  * @Author: Sylwester Gawroński
  */
-public class MainController implements Initializable {
+public class MainController implements Initializable, Runnable {
     private OpenNewWindow openNewWindow = new OpenNewWindow();
    private SendEmail sendEmail = new SendEmail();
    private CheckingMessages checkingMessages = new CheckingMessages();
@@ -41,13 +41,15 @@ public class MainController implements Initializable {
     ProgressIndicator progress;
     @FXML
     MenuItem menuIntemAbout;
+    @FXML
+    MenuItem menuItemRefresh;
+    @FXML
+    TextArea viewTextArea;
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         imageViewIcon.setImage(ShowLogo.getLogo());
-        checkingMessages.checkMail(service.getHostPOP(),service.getMailStoreType(),user.getFROM(),user.getPASSWORD());
-        labelCount.setText(String.valueOf(checkingMessages.getMessagesCout()));
-        listViewMessages.getItems().addAll(checkingMessages.getListMessage().keySet());
+        run();
     }
 
 
@@ -60,5 +62,22 @@ public class MainController implements Initializable {
     private void about(){
          openNewWindow.openWindow("aboutEmailSenderWindow.fxml","About EmailSender");
 
+    }
+    @FXML
+    private void refresh(){
+        run();
+    }
+
+    @Override
+    public void run() {
+        checkingMessages.checkMail(service.getHostPOP(),service.getMailStoreType(),user.getFROM(),user.getPASSWORD());
+        labelCount.setText(String.valueOf(checkingMessages.getMessagesCout()));
+        listViewMessages.getItems().addAll(checkingMessages.getListMessage().keySet());
+    }
+
+    @FXML
+    public void readMessage(){
+        String a = (String) checkingMessages.getListMessage().get(listViewMessages.getSelectionModel().getSelectedItem());
+        viewTextArea.setText(a);
     }
 }

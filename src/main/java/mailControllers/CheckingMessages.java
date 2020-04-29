@@ -16,16 +16,16 @@ import javax.mail.internet.MimeMultipart;
 // todo ta klasa musi być odtwarzana cyklicznie
 public class CheckingMessages {
     private int messagesCout = 0;
+    private int messagesNumber;
     private Message[] messages;
     private ObservableList<String> listStrings = FXCollections.<String>observableArrayList();
     private Map<Message, Object> listMessage = new HashMap<Message, Object>();
-   // private Map<String,String> dataTest = new HashMap<>();TEST
+    //private Map<String,String> dataTest = new HashMap<>();
 
     private TrayNotificationController trayNotificationController = new TrayNotificationController();
 
     public void checkMail(String host, String storeType, String user, String password) {
         try {
-
             // create properties field
             Properties properties = new Properties();
 
@@ -62,8 +62,7 @@ public class CheckingMessages {
             // retrieve the messages from the folder in an array and print it
             messages = emailFolder.getMessages();
             System.out.println("messages.length---" + messages.length);
-
-            //dataTest.put("klucz","wartosc");
+            //messagesNumber = messages.length;
 
             for (int i = 0, n = messages.length; i < n; i++) {
                 Message message = messages[i];
@@ -118,4 +117,7 @@ public class CheckingMessages {
         return listStrings;
     }
 
+    public int getMessagesNumber() {
+        return messagesNumber;
+    }
 }

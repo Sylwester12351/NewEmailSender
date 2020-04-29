@@ -9,7 +9,6 @@
 <?import javafx.scene.control.MenuBar?>
 <?import javafx.scene.control.MenuItem?>
 <?import javafx.scene.control.ProgressIndicator?>
-<?import javafx.scene.control.SeparatorMenuItem?>
 <?import javafx.scene.control.SplitPane?>
 <?import javafx.scene.control.TextArea?>
 <?import javafx.scene.control.TextField?>
@@ -27,32 +26,12 @@
       <menus>
         <Menu mnemonicParsing="false" text="File">
           <items>
-            <MenuItem mnemonicParsing="false" text="New" />
-            <MenuItem mnemonicParsing="false" text="Open…" />
-            <Menu mnemonicParsing="false" text="Open Recent" />
-            <SeparatorMenuItem mnemonicParsing="false" />
-            <MenuItem mnemonicParsing="false" text="Close" />
-            <MenuItem mnemonicParsing="false" text="Save" />
-            <MenuItem mnemonicParsing="false" text="Save As…" />
-            <MenuItem mnemonicParsing="false" text="Revert" />
-            <SeparatorMenuItem mnemonicParsing="false" />
-            <MenuItem mnemonicParsing="false" text="Preferences…" />
-            <SeparatorMenuItem mnemonicParsing="false" />
             <MenuItem mnemonicParsing="false" text="Quit" />
           </items>
         </Menu>
         <Menu mnemonicParsing="false" text="Edit">
           <items>
-            <MenuItem mnemonicParsing="false" text="Undo" />
-            <MenuItem mnemonicParsing="false" text="Redo" />
-            <SeparatorMenuItem mnemonicParsing="false" />
-            <MenuItem mnemonicParsing="false" text="Cut" />
-            <MenuItem mnemonicParsing="false" text="Copy" />
-            <MenuItem mnemonicParsing="false" text="Paste" />
-            <MenuItem mnemonicParsing="false" text="Delete" />
-            <SeparatorMenuItem mnemonicParsing="false" />
-            <MenuItem mnemonicParsing="false" text="Select All" />
-            <MenuItem mnemonicParsing="false" text="Unselect All" />
+            <MenuItem fx:id="menuItemRefresh" mnemonicParsing="false" onAction="#refresh" text="Refresh" />
           </items>
         </Menu>
         <Menu mnemonicParsing="false" text="Help">
@@ -74,14 +53,14 @@
                 <Color blue="0.624" green="0.624" red="0.624" fx:id="x2" />
               </textFill>
             </Label>
-                  <ListView fx:id="listViewMessages" layoutY="37.0" prefHeight="494.0" prefWidth="211.0" />
+                  <ListView fx:id="listViewMessages" layoutY="37.0" onMouseClicked="#test" prefHeight="494.0" prefWidth="211.0" />
                   <Label fx:id="labelCount" layoutX="137.0" layoutY="17.0" text="0" />
           </children>
         </AnchorPane>
         <AnchorPane prefHeight="549.0" prefWidth="218.0">
           <children>
             <Label alignment="CENTER" font="$x1" layoutX="14.0" layoutY="14.0" style="&#10;" text="View" textAlignment="CENTER" textFill="$x2" wrapText="false" />
-                  <TextArea editable="false" layoutX="8.0" layoutY="37.0" prefHeight="494.0" prefWidth="286.0" wrapText="true" />
+                  <TextArea fx:id="viewTextArea" editable="false" layoutX="8.0" layoutY="37.0" prefHeight="494.0" prefWidth="286.0" wrapText="true" />
           </children>
         </AnchorPane>
             <VBox prefHeight="549.0" prefWidth="479.0">
