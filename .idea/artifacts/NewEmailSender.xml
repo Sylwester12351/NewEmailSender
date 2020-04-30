@@ -1,6 +1,6 @@
 <component name="ArtifactManager">
   <artifact type="javafx" name="NewEmailSender">
-    <output-path>$PROJECT_DIR$/out/artifacts/NewEmailSender</output-path>
+    <output-path>$PROJECT_DIR$/out/artifacts/NewEmailSenderOTHER</output-path>
     <properties id="javafx-properties">
       <options>
         <option name="alias" value="" />
@@ -13,7 +13,6 @@
           </JavaFxApplicationIcons>
         </option>
         <option name="keystore" value="" />
-        <option name="nativeBundle" value="dmg" />
         <option name="title" value="EmailSender" />
         <option name="vendor" value="" />
         <option name="version" value="1" />

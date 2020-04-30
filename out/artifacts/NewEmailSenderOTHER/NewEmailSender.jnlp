@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?><jnlp spec="1.0" xmlns:jfx="http://javafx.com" href="NewEmailSender.jnlp">
+    <information>
+        <title>EmailSender</title>
+        <vendor>Unknown</vendor>
+        <description>none</description>
+        <offline-allowed/>
+    </information>
+    <update check="background"/>
+    <resources>
+        <j2se version="10.0.1+" href="http://java.sun.com/products/autodl/j2se"/>
+        <jar href="NewEmailSender.jar" size="62079" download="eager"/>
+        <jar href="TrayNotification-master-5393c3a54f-1.jar" size="42523" download="eager"/>
+        <jar href="activation-1.1.jar" size="62983" download="eager"/>
+        <jar href="commons-lang3-3.8.1.jar" size="501879" download="eager"/>
+        <jar href="javax.mail-1.6.2.jar" size="659031" download="eager"/>
+    </resources>
+    <jfx:javafx-desc width="600" height="400" main-class="App" name="App"/>
+</jnlp>
+
