@@ -1,5 +1,4 @@
 import config.ReadConfig;
-import controllers.CheckBoxesControl;
 import controllers.TrayNotificationController;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
@@ -22,8 +21,6 @@ public class App extends Application {
         primaryStage.setResizable(false);
         primaryStage.initStyle(StageStyle.DECORATED);
         primaryStage.show();
-        TrayNotificationController TrayNotificationController = new TrayNotificationController()
-                .viewNotification("Welcome",":)");
     }
 
 

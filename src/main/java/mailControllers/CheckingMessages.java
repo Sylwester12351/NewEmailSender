@@ -2,25 +2,19 @@ package mailControllers;
 
 import com.sun.mail.util.MailSSLSocketFactory;
 import controllers.TrayNotificationController;
-import javafx.collections.FXCollections;
-import javafx.collections.ObservableList;
-
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 import java.util.Properties;
 
 import javax.mail.*;
-import javax.mail.internet.MimeMultipart;
 
-// todo ta klasa musi być odtwarzana cyklicznie
+
+
 public class CheckingMessages {
     private int messagesCout = 0;
     private int messagesNumber;
     private Message[] messages;
-    private ObservableList<String> listStrings = FXCollections.<String>observableArrayList();
-    private Map<Message, Object> listMessage = new HashMap<Message, Object>();
-    //private Map<String,String> dataTest = new HashMap<>();
+    private Map<String, Object> listMessage = new HashMap<String, Object>();
 
     private TrayNotificationController trayNotificationController = new TrayNotificationController();
 
@@ -29,7 +23,7 @@ public class CheckingMessages {
             // create properties field
             Properties properties = new Properties();
 
-            MailSSLSocketFactory sf = new MailSSLSocketFactory(); // todo musi być to w opcjach, włączone ignoruje błąd SSL
+            MailSSLSocketFactory sf = new MailSSLSocketFactory();
             sf.setTrustAllHosts(true);
 
             properties.put("mail.pop3s.ssl.trust", "*");
@@ -66,22 +60,11 @@ public class CheckingMessages {
 
             for (int i = 0, n = messages.length; i < n; i++) {
                 Message message = messages[i];
-                listStrings.add(i,message.getSubject());
+                listMessage.put(message.getSubject(),message.getContent());
                 messagesCout = i + 1;
 
-                // read message
-               Object content = message.getContent();
-               if (content instanceof MimeMultipart){
-                   MimeMultipart multipart = (MimeMultipart) content;
-                   if (multipart.getCount()>0){
-                       BodyPart part = multipart.getBodyPart(0);
-                       content = part.getContent();
-                       //System.out.println(content);
-                       listMessage.put(message,content);
-                   }
-               }
             }
-            if (messagesCout < 0){
+            if (messagesCout >= 1){
                 trayNotificationController.viewNotification("Message", "New Messages = "+ messagesCout);
             }else {
                 trayNotificationController.viewNotification("Message","There are no new messages");
@@ -101,7 +84,7 @@ public class CheckingMessages {
 
     }
 
-    public Map<Message, Object> getListMessage() {
+    public Map<String, Object> getListMessage() {
         return listMessage;
     }
 
@@ -113,11 +96,8 @@ public class CheckingMessages {
         return messages;
     }
 
-    public List<String> getListStrings() {
-        return listStrings;
-    }
-
     public int getMessagesNumber() {
         return messagesNumber;
     }
+
 }

@@ -26,7 +26,8 @@
       <menus>
         <Menu mnemonicParsing="false" text="File">
           <items>
-            <MenuItem mnemonicParsing="false" text="Quit" />
+                  <MenuItem mnemonicParsing="false" onAction="#preferences" text="Preferences" />
+            <MenuItem mnemonicParsing="false" onAction="#exitApp" text="Quit" />
           </items>
         </Menu>
         <Menu mnemonicParsing="false" text="Edit">
@@ -53,7 +54,7 @@
                 <Color blue="0.624" green="0.624" red="0.624" fx:id="x2" />
               </textFill>
             </Label>
-                  <ListView fx:id="listViewMessages" layoutY="37.0" onMouseClicked="#test" prefHeight="494.0" prefWidth="211.0" />
+                  <ListView fx:id="listViewMessages" layoutY="37.0" onMouseClicked="#readMessage" prefHeight="494.0" prefWidth="211.0" />
                   <Label fx:id="labelCount" layoutX="137.0" layoutY="17.0" text="0" />
           </children>
         </AnchorPane>

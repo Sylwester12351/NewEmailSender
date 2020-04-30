@@ -8,6 +8,7 @@ import javafx.scene.control.*;
 import javafx.scene.image.ImageView;
 import mailControllers.CheckingMessages;
 import mailControllers.SendEmail;
+import org.apache.commons.lang3.StringUtils;
 import properties.Service;
 import properties.User;
 
@@ -52,10 +53,14 @@ public class MainController implements Initializable, Runnable {
         run();
     }
 
-
     @FXML
     private void sendMessage(){
-        sendEmail.sendEmail(textFieldAddres.getText(),textFieldTitle.getText(),textAreaMessage.getText());
+        if (!StringUtils.isBlank(textFieldAddres.getCharacters())||!StringUtils.isBlank(textFieldTitle.getCharacters())){
+            sendEmail.sendEmail(textFieldAddres.getText(),textFieldTitle.getText(),textAreaMessage.getText());
+        }else {
+            TrayNotificationController trayNotificationController = new TrayNotificationController().viewNotification("Warrning","You didn't enter the address or title");
+        }
+
 
     }
     @FXML
@@ -65,6 +70,8 @@ public class MainController implements Initializable, Runnable {
     }
     @FXML
     private void refresh(){
+        checkingMessages.getListStrings().clear();
+        checkingMessages.getListMessage().clear();
         run();
     }
 
@@ -72,12 +79,22 @@ public class MainController implements Initializable, Runnable {
     public void run() {
         checkingMessages.checkMail(service.getHostPOP(),service.getMailStoreType(),user.getFROM(),user.getPASSWORD());
         labelCount.setText(String.valueOf(checkingMessages.getMessagesCout()));
+       // listViewMessages.getItems().add(checkingMessages.getListStrings());
         listViewMessages.getItems().addAll(checkingMessages.getListMessage().keySet());
+
     }
 
     @FXML
     public void readMessage(){
         String a = (String) checkingMessages.getListMessage().get(listViewMessages.getSelectionModel().getSelectedItem());
         viewTextArea.setText(a);
+    }
+    @FXML
+    public void preferences(){
+        openNewWindow.openWindow("preferencesWindow.fxml","Preferences");
+    }
+    @FXML
+    public void exitApp(){
+        System.exit(0);
     }
 }
