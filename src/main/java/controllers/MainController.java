@@ -70,7 +70,6 @@ public class MainController implements Initializable, Runnable {
     }
     @FXML
     private void refresh(){
-        checkingMessages.getListStrings().clear();
         checkingMessages.getListMessage().clear();
         run();
     }
